@@ -1,43 +1,81 @@
 
-class carrito {
-    constructor(clave) {
-        this.clave = clave || "productos";
-        this.productos = this.obtener();
-    }
 
-    agregar(producto) {
-        if (!this.existe(producto.id)) {
-            this.productos.push(producto);
-            this.guardar();
-        }
-    }
+alert(`Lista de inventario por categorias :
+-1 Indumentaria
+-2 Electrodomestico
+-3 Electronicos`);
 
-    quitar(id) {
-        const indice = this.productos.findIndex(p => p.id === id);
-        if (indice != -1) {
-            this.productos.splice(indice, 1);
-            this.guardar();
-        }
-    }
-
-    guardar() {
-        localStorage.setItem(this.clave, JSON.stringify(this.productos));
-    }
-
-    obtener() {
-        const productosCodificados = localStorage.getItem(this.clave);
-        return JSON.parse(productosCodificados) || [];
-    }
-
-    existe(id) {
-        return this.productos.find(producto => producto.id === id);
-    }
-
-    obtenerConteo() {
-        return this.productos.length;
-    }
+let capturaDatos = prompt("Introduce la categoria de articulos que deseas visitar");
 
 
+const productos = [
+    {
+        id:101,
+        nombre: 'Calzado para hombre',
+        precio: 700,
+        categoria: 'Indumentaria'
+
+
+},
+
+{
+    id: 202,
+    nombre: 'Traje de vestir',
+    precio: 300,
+    categoria: 'Indumentaria'
+
+
+},
+
+{
+    id: 102,
+    nombre: 'Microondas',
+    precio: 1200,
+    categoria: 'Electrodomestico'
+
+
+},
+
+
+{
+    id: 203,
+    nombre: 'Lavadora',
+    precio: 1450,
+    categoria: 'Electrodomestico'
+
+
+},
+
+
+{
+    id: 103,
+    nombre: 'MacBook Pro 21',
+    precio: 790,
+    categoria: 'Electronicos'
+
+
+},
+
+{
+    id: 303,
+    nombre: 'Speaker Bluetooth',
+    precio: 465,
+    categoria: 'Electronicos'
+
+
+},
+];
+
+
+const inciar = () => {
+    const lista = productos.reduce((acc,p) => acc += `\n${p.id} - ${p.nombre}\n`,'');
+    const productoSeleccionado = parseInt(prompt('Indique el numero de producto: ' + lista));
+    const productoEncontrado = productos.find(articulo => articulo.id === productoSeleccionado);
+    console.log(productoEncontrado);
+
+    const productoFiltrado = productos.filter(articulo => articulo.categoria === 'Electronicos')
+    console.log(productoFiltrado);
 }
 
+inciar()
 
