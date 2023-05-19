@@ -1,6 +1,6 @@
 
 
-alert(`Lista de inventario por categorias tenemos las siguientes categorias :
+alert(`Lista de inventario por consola  tenemos las siguientes categorias :
 Indumentaria
 Electrodomestico
 Electronicos`);
