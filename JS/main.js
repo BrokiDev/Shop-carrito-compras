@@ -1,11 +1,9 @@
 
 
-alert(`Lista de inventario por categorias :
--1 Indumentaria
--2 Electrodomestico
--3 Electronicos`);
-
-let capturaDatos = prompt("Introduce la categoria de articulos que deseas visitar");
+alert(`Lista de inventario por categorias tenemos las siguientes categorias :
+Indumentaria
+Electrodomestico
+Electronicos`);
 
 
 const productos = [
@@ -69,13 +67,15 @@ const productos = [
 
 const inciar = () => {
     const lista = productos.reduce((acc,p) => acc += `\n${p.id} - ${p.nombre}\n`,'');
-    const productoSeleccionado = parseInt(prompt('Indique el numero de producto: ' + lista));
+    const productoSeleccionado = parseInt(prompt('Indique el id del producto: ' + lista));
     const productoEncontrado = productos.find(articulo => articulo.id === productoSeleccionado);
     console.log(productoEncontrado);
 
-    const productoFiltrado = productos.filter(articulo => articulo.categoria === 'Electronicos')
-    console.log(productoFiltrado);
+    let capturaDatos = prompt("A cual categoria deseas ingresar")
+    const productoFiltrado = productos.filter(articulo => articulo.categoria === capturaDatos)
+    return console.log(productoFiltrado);
 }
 
 inciar()
+
 
