@@ -22,7 +22,7 @@
             <li><a href="#">Nosotros</a></li>
           </ul>
           <div class="carrito">
-            <button onclick="alert('Don\'t touch me i\'m not ready')">
+            <button id="carrito">
               <img src="./multimedia/icon1.png" alt="" />
             </button>
           </div>
@@ -52,89 +52,108 @@
       <h2>Nuestros Productos</h2>
     </section>
 
-    <main>
-      <div class="contenedor-grid">
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a id="carrito" href="#">Agregar al carrito</a>
+    <!-- The Modal -->
+    <div id="ventana-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Carrito de compras</h2>
         </div>
-
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a href="#">Agregar al carrito</a>
-        </div>
-
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a href="#">Agregar al carrito</a>
-        </div>
-
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a href="#">Agregar al carrito</a>
-        </div>
-
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a href="#">Agregar al carrito</a>
-        </div>
-
-        <div class="contenido-grid">
-          <h2>Laptop Gaming</h2>
-          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            est dolorum, laboriosam sint atque repellat in exercitationem
-            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
-            magnam numquam nemo? Voluptate.
-          </p>
-          <span>$1,250 USD</span>
-          <a href="#">Agregar al carrito</a>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <h3 id="total"></h3>
+          <a id="finalizar-compra" class="boton-carrito" href="#"
+            >Finalizar compra</a
+          >
+          <a id="vaciar-carrito" class="boton-carrito" href="#"
+            >Vaciar Carrito</a
+          >
         </div>
       </div>
-    </main>
+    </div>
 
-    <script src="./JS/main.js"></script>
+    <main>
+      <div id="contenedor-contenido" class="contenedor-grid">
+        <!-- <div id="container-products" class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div>
+
+        <div class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div>
+
+        <div class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div>
+
+        <div class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div>
+
+        <div class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div>
+
+        <div class="contenido-grid">
+          <h2>Laptop Gaming</h2>
+          <img src="./multimedia/img2.jpg" alt="imagen-laptop" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            est dolorum, laboriosam sint atque repellat in exercitationem
+            officiis laborum molestiae modi harum alias, eveniet ea assumenda,
+            magnam numquam nemo? Voluptate.
+          </p>
+          <span>$1,250 USD</span>
+          <a href="#">Agregar al carrito</a>
+        </div> -->
+      </div>
+    </main>
 
     <footer>
       <div class="footer">
@@ -152,5 +171,7 @@
         </nav>
       </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/main.js"></script>
   </body>
 </html>
