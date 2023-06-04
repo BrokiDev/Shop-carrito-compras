@@ -152,6 +152,11 @@ function cargarProductos () {
       eliminarProductoDelCarrito()
       totalElement.innerText = "Total: $" + 0;
       localStorage.clear()
+      Swal.fire(
+        'Listo!',
+        'Tu compra fue completada exitosamente!',
+        'success'
+      )
   });
 
   vaciarCarrito.addEventListener("click", () => {
