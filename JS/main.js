@@ -80,6 +80,13 @@ function agregarAlCarrito(productoAgregar) {
 
     guardarEnLocalStorage();
     mostrarProductos();
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Agregado al carrito Exitosamente',
+        showConfirmButton: false,
+        timer: 1000
+      })
 }
 
 function mostrarProductos() {
@@ -148,6 +155,7 @@ function cargarProductos () {
 
 //Eventos agregados a estas constantes para finalizar compra o vacear el carrito  
   
+
   finalizarCompra.addEventListener("click", () => {
       eliminarProductoDelCarrito()
       totalElement.innerText = "Total: $" + 0;
@@ -158,6 +166,8 @@ function cargarProductos () {
         'success'
       )
   });
+
+
 
   vaciarCarrito.addEventListener("click", () => {
     eliminarProductoDelCarrito()
