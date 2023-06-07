@@ -20,6 +20,27 @@ function cargarEventos() {
     productosCarrito = JSON.parse(localStorage.getItem('productoStorage')) || [];
     mostrarProductos();
     modalBody.addEventListener('click', eliminarProducto);
+    //Eventos agregados a estas constantes para finalizar compra o vacear el carrito  
+  
+
+  finalizarCompra.addEventListener("click", () => {
+    eliminarProductoDelCarrito()
+    totalElement.innerText = "Total: $" + 0;
+    localStorage.clear()
+    Swal.fire(
+      'Listo!',
+      'Tu compra fue completada exitosamente!',
+      'success'
+    )
+});
+
+
+
+vaciarCarrito.addEventListener("click", () => {
+  eliminarProductoDelCarrito()
+  totalElement.innerText = "Total: $" + 0;
+  localStorage.clear()
+})
 }
 
 
@@ -153,25 +174,4 @@ function cargarProductos () {
 
 
 
-//Eventos agregados a estas constantes para finalizar compra o vacear el carrito  
-  
-
-  finalizarCompra.addEventListener("click", () => {
-      eliminarProductoDelCarrito()
-      totalElement.innerText = "Total: $" + 0;
-      localStorage.clear()
-      Swal.fire(
-        'Listo!',
-        'Tu compra fue completada exitosamente!',
-        'success'
-      )
-  });
-
-
-
-  vaciarCarrito.addEventListener("click", () => {
-    eliminarProductoDelCarrito()
-    totalElement.innerText = "Total: $" + 0;
-    localStorage.clear()
-  });
 
