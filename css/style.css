@@ -319,11 +319,15 @@ body {
   }
 
   .contenedor img {
-    max-width: 480px;
+    max-width: 100%;
   }
 
   .contenedor-grid {
     display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
     flex-direction: column;
   }
   
