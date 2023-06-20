@@ -48,6 +48,10 @@ function cargarEventos() {
     })
 }
 
+function showMenu() {
+    let navbar = document.getElementById('myTopnav');
+    navbar.className = navbar.className === 'topnav' ? (navbar.className += ' responsive') : (navbar.className = 'topnav');
+}
 
 //Funcion que elimina un producto del modal
 
@@ -190,13 +194,10 @@ async function cargarProductos () {
     }
 
 )})
-.catch((error) => error = alert("algo no anda bien con la ejecucion del sitio"))
+.catch((error) => error = alert("algo no anda bien con la ejecucion del sitio comunicate con el administrador del sitio para resolver el inconveniente"))
 }
 
-function showMenu() {
-    let navbar = document.getElementById('myTopnav');
-    navbar.className = navbar.className === 'topnav' ? (navbar.className += ' responsive') : (navbar.className = 'topnav');
-}
+
 
 
 
