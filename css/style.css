@@ -9,12 +9,38 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 15px 0px;
-  background-color: rgba(0, 0, 0, 0.8);
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 .logo {
@@ -28,40 +54,6 @@ body {
   color: #00ffff;
 }
 
-.navegacion {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-.navegacion ul {
-  display: flex;
-  gap: 8px;
-}
-.navegacion ul li {
-  list-style: none;
-}
-.navegacion ul li a {
-  text-decoration: none;
-  color: #00ffff;
-}
-.navegacion ul li a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-.navegacion .carrito {
-  display: flex;
-  gap: 8px;
-}
-.navegacion .carrito button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-.navegacion img {
-  width: 40px;
-  object-fit: contain;
-  margin: 0px 0px 0px 15px;
-}
 
 .footer {
   display: flex;
@@ -69,17 +61,6 @@ body {
   align-items: center;
   padding: 15px 0px;
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-.logo {
-  font-size: 32px;
-}
-.logo a {
-  text-decoration: none;
-}
-.logo h3 {
-  margin: 0 10px 0 0;
-  color: #00ffff;
 }
 
 .navegacion {
@@ -316,6 +297,52 @@ body {
 .boton-carrito:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+      display: none;
+  }
+  .topnav a.icon {
+      float: right;
+      display: block;
+  }
+
+  .section-header {
+    position: relative;
+    top: 85px;
+    margin-bottom: 100px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .contenedor img {
+    max-width: 480px;
+  }
+
+  .contenedor-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+      position: relative;
+  }
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
 }
 
 

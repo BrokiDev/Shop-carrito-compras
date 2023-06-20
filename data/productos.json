@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Laptop Gaming",
+      "precio": "$1250",
+      "img": "../multimedia/img2.jpg"
+    }
+  ]
